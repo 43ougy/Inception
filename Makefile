@@ -14,7 +14,7 @@ down:
 	@printf "Stopping...\n"
 	@docker-compose -f ./srcs/docker-compose.yml down
 
-re: down
+re: fclean
 	@printf "Rebuilding...\n"
 	@mkdir -p $(HOME)/data/wordpress
 	@mkdir -p $(HOME)/data/mariadb
